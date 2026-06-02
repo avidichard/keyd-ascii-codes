@@ -27,7 +27,7 @@ keyd.rvaiya reload
 5. Changes are immediate and should be available system-wide.
 
 # EXTRA NOTES
-These are small trade-off when you mode from Windows to linux but I made sure that the trade-offs were minimal and not too hard for your brain to adapt.
+These are small trade-off when you move from Windows to linux but I made sure that the trade-offs were minimal and not too hard for your brain to adapt.
 
 1. keyd does not yet have a "on-key-release" option. This means that as soon as you typed the third number of the ascii code, the character will instantly type itself before you releas the ALT key.
 2. For single and 2 digit ascii codes, you NEED to preceed the number with their leading ZEROS. so ALT+32 becomes ALT+032 and ALT+9 becomes ALT+009.
