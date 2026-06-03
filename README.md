@@ -5,7 +5,7 @@ Enable ALT + Ascii Code character support like in Windows for Linux using the NU
 Just one: [keyd](https://github.com/rvaiya/keyd)
 
 # ABOUT
-Makes it possible to use ALT+AsciiCode for the most popular French accentuated characters as well as a few other examples like backspace, enter, pipe, tilde, space and some special characters just for demonstration. These codes all use the universal standard ascii codes.
+Makes it possible to use ALT+AsciiCode for the most popular French accentuated characters as well as a few other examples like space, enter, pipe, tilde, space and some special characters just for demonstration. These codes all use the universal standard ascii codes.
 
 # INSTALLATION (Debian or other apt base Linux distro)
 1. In command line, login as root
