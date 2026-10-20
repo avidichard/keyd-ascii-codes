@@ -18,9 +18,9 @@ systemctl start keyd
 systemctl enable keyd
 ```
 3. Put the file (default.conf) under this path: /etc/keyd/default.conf
-4. To apply settings of this file, you need to reload keyd.
+4. To apply settings of this file, you need to reload keyd **as root**: `keyd reload`
 
-   **NOTE:** keyd is the process name but the executable is named "keyd.rvaiya". Reload keyd by running this command as root:
+   **NOTE:** If the above does not work, keyd is the process name but the executable may be named "keyd.rvaiya". Reload keyd by running this command as root:
 ```
 keyd.rvaiya reload
 ```
