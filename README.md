@@ -35,9 +35,10 @@ These are small trade-offs when you move from Windows to linux but I made sure t
 4. Finally, you may see a subtle typing of the unicode codes since the system simulates the pressing of Ctrl+Shift+u+Unicode+Enter. This means that you may see in a split second the letters "u00E9" before the "é" appears which is normal but universally accepted on most major Linux distros and does not hinder anything aside from possible OCD people wanting absolute invisible behind the scenes workarounds. Its a small price to pay for Windows like integrations on a kernel-level on Linux and for me, it's very acceptable.
 
 # EXTENDED WINE MSOFFICE SUPPORT
-This file will require you to build keyd from source and change 2 entries in the source code. As mentionned in the ectra notes, the number 5 preceeds extended unicode characters, this has been changed to 3 because 5 is used for MS Office in Wine.
+This file will require you to build keyd from source and change 2 entries in the source code. As mentionned in the extra notes above, the number 5 preceeds extended unicode character codes. If you want to use this extended version, this has been changed to 3 because 5 is used for MS Office in Wine. In other words, all codes are now preceeded by 5 and extended unicode, like the provided bullet "•" character, ascii code #0149 is now #3149. If you want an e acute "é", ascii code #130, in Microsoft Office in Wine, it will be #5130. The rest stays unchanged.
 
-Installation:
+**Installation**
+
 - git clone https://github.com/rvaiya/keyd
 - nano keyd/src/ini.h
 - Change the value of this line from 32 to 128: `#define MAX_SECTIONS 128`
