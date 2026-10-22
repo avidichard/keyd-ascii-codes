@@ -34,6 +34,22 @@ These are small trade-offs when you move from Windows to linux but I made sure t
 3. In windows, you can preceed an ascii code with a ZERO to type non-standard characters. This file permits the same thing with the exception of using a leading 5 instead of 0 which I have nicknamed in a very original name "#5-trigger". For example, the bullet character which is normally done by ALT+0149 becomes ALT+5149. This file only contains the bullet character support and the ENTER (5013 instead of 013 on Windows).
 4. Finally, you may see a subtle typing of the unicode codes since the system simulates the pressing of Ctrl+Shift+u+Unicode+Enter. This means that you may see in a split second the letters "u00E9" before the "é" appears which is normal but universally accepted on most major Linux distros and does not hinder anything aside from possible OCD people wanting absolute invisible behind the scenes workarounds. Its a small price to pay for Windows like integrations on a kernel-level on Linux and for me, it's very acceptable.
 
+# EXTENDED WINE MSOFFICE SUPPORT
+This file will require you to build keyd from source and change 2 entries in the source code. As mentionned in the ectra notes, the number 5 preceeds extended unicode characters, this has been changed to 3 because 5 is used for MS Office in Wine.
+
+Installation:
+- git clone https://github.com/rvaiya/keyd
+- nano keyd/src/ini.h
+- Change the value of this line from 32 to 128: `#define MAX_SECTIONS 128`
+- Save and exit
+- nano keyd/src/config.h
+- Change the value of this line from 32 to 128: `#define MAX_LAYERS        128`
+- Save and exit
+- cd keyd
+- make
+- make install
+- systemctl enable –now keyd
+
 # FINAL NOTE AND DISTRIBUTION RIGHTS
 You can by all means extend this file, change it and resdeistribute it as you wish. Linux is free, keyd is free, so is this file. It's a proof of concept that works for my personal needs. If you have other needs or you want to take time and support the entire 255 characters of the standard ascii table, please be welcomed.
 
